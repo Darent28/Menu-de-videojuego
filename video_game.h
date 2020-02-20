@@ -11,7 +11,6 @@ class VideoGame {
       // Member Functions
       void setESRB(int select);
       void setStatus(int select);
-      void setPrice(float fixed_price);
 };
 
 void VideoGame::setESRB(int select) {
