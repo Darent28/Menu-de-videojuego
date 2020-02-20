@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include "video_game.h"
 
 using namespace std;
 
