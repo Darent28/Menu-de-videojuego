@@ -14,7 +14,7 @@ class VideoGame {
       // Member Functions
       void setESRB(int select);
       void setStatus(int select);
-      void setPrice(float set_price);
+      void setPrice();
 };
 
 void VideoGame::setESRB(int select) {
@@ -27,14 +27,14 @@ void VideoGame::setStatus(int select) {
     status = statuses[select];
 }
 
-void VideoGame::setPrice(float set_price) {
-    if(status != "") {
+void VideoGame::setPrice() {
+    if(status != "" && ((sell_price || rent_price) != NULL)) {
         if(status == "Venta") {
             price = sell_price;
         } else {
             price = rent_price;
         }
     } else {
-        std::cout << "Debes establecer un status primero :/ \n";
+        std::cout << "Err404: Debes establecer un status primero y/o agregar precios de venta/renta :/ \n";
     }
 }
