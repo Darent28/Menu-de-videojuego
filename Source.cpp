@@ -3,43 +3,40 @@
 
 using namespace std;
 
- int main() {
-	
-	int a, b;
+int main() {
 
-	while (a != 3) {
+	int opcion = 0;
+
+	while (opcion != 3) {
 		cout << "1) Compra de un video juego \n";
 		cout << "2) Renta de un video juego \n";
 		cout << "3) Salir \n";
-		cin >> a;
+		cout << "Seleciona una opcion: ";
+		cin >> opcion;
 
-		int b;
-		cin >> b;
-		switch (b) {
+		switch (opcion) {
 
-		 case 1:
+		case 1:
 			system("cls");
 			cout << "Desea comprar un videojuego \n";
 			system("pause");
 			system("cls");
 			break;
 
-		 case 2:
+		case 2:
 			system("cls");
 			cout << "Desea rentar un videojuego \n";
-			cout << "Desea comprar un videojuego \n";
 			system("pause");
 			system("cls");
 
-		 default:
-			if (a < 1, a > 3) {
+		default:
+			if (opcion < 1 && opcion > 3) {
 				cout << "ERROR \n";
 				system("cls");
-			
 			}
 			break;
 		}
-
-	
 	}
- } 
+	system("pause");
+	return 0;
+}
