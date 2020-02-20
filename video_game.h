@@ -14,11 +14,11 @@ class VideoGame {
 };
 
 void VideoGame::setESRB(int select) {
-  char classification[6][5] = { "E", "E10+", "T", "M17+", "A", "RP" };
-  esrb = classification[select];
+    char classification[6][5] = { "E", "E10+", "T", "M17+", "A", "RP" };
+    esrb = classification[select];
 }
 
 void VideoGame::setStatus(int select) {
-  char statuses[2][6] = { "Venta", "Renta" };
-  status = statuses[select];
+    char statuses[2][6] = { "Venta", "Renta" };
+    status = statuses[select];
 }
