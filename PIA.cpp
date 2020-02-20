@@ -1,26 +1,45 @@
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
-int a;
+ int main() {
+	
+	int a, b;
 
-void main() {
+	while (a != 3) {
+		cout << "1) Compra de un video juego \n";
+		cout << "2) Renta de un video juego \n";
+		cout << "3) Salir \n";
+		cin >> a;
 
-	cout << "introduce un numero del 1 al 2 \n";
-	cin >> a;
+		int b;
+		cin >> b;
+		switch (b) {
 
-	if (a == 1){
-		cout << "Compra de Video juego \n";
+		 case 1:
+			system("cls");
+			cout << "Desea comprar un videojuego \n";
+			system("pause");
+			system("cls");
+			break;
 
-    }
-	 else if (a == 2) {
-		cout << "Renta de Video juego \n";
+		 case 2:
+			system("cls");
+			cout << "Desea rentar un videojuego \n";
+			cout << "Desea comprar un videojuego \n";
+			system("pause");
+			system("cls");
 
-	  }
-	 else {
-		cout << "ERROR";
-	 
-	  }
-	system("pause<nul");
-}
-	      
+		 default:
+			if (a < 1, a > 3) {
+				cout << "ERROR \n";
+				system("cls");
+			
+			}
+			break;
+		}
+
+	
+	}
+ } 
