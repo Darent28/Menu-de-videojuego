@@ -1,16 +1,20 @@
+#include <iostream>
 #include <string>
 
 class VideoGame {
     public:
-      std::string name;
-      std::string esrb;
-      std::string status;
-      float price;
+      std::string name = "";
+      std::string esrb = "";
+      std::string status = "";
       int quantity;
+      float sell_price;
+      float rent_price;
+      float price;
 
       // Member Functions
       void setESRB(int select);
       void setStatus(int select);
+      void setPrice(float set_price);
 };
 
 void VideoGame::setESRB(int select) {
@@ -21,4 +25,16 @@ void VideoGame::setESRB(int select) {
 void VideoGame::setStatus(int select) {
     char statuses[2][6] = { "Venta", "Renta" };
     status = statuses[select];
+}
+
+void VideoGame::setPrice(float set_price) {
+    if(status != "") {
+        if(status == "Venta") {
+            price = sell_price;
+        } else {
+            price = rent_price;
+        }
+    } else {
+        std::cout << "Debes establecer un status primero :/ \n";
+    }
 }
